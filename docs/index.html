@@ -1,17 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HOA Feedback Form</title>
-    <link rel="stylesheet" href="styles.css" />
-    <!-- Add any other meta tags you may need -->
-  </head>
-  <body>
-    <!-- This is the root element where your React component will be rendered -->
-    <div id="root"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HOA Feedback Form</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>HOA Feedback Form</h1>
+    <form id="hoa-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
 
-    <!-- Link to the bundled JavaScript file -->
-    <script src="index.js"></script>
-  </body>
+      <label for="category">Category:</label>
+      <select id="category" name="category" required>
+        <option value="">-- Select a category --</option>
+        <option value="architecture">Architecture</option>
+        <option value="landscaping">Landscaping</option>
+        <option value="safety">Safety</option>
+        <option value="general">General</option>
+      </select>
+
+      <label for="details">Details:</label>
+      <textarea id="details" name="details" rows="5" required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <div id="message" class="hidden">Thank you! Your feedback was submitted.</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>
